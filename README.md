@@ -15,7 +15,7 @@ Aquí está el código por si es necesario descargarlo. Hay seis archivos:
 
 6) Un ejemplo del resultado del piff_aleatorio, denominado random2D.txt. Si el piffaleatorio tiene problemas, cargar directamente el random2D.txt en la misma carpeta que el resto.
 
-7) El archivo adhesionComunicacion.cc3d. Este es el que es llamado al usar el programa. 
+7) El archivo adhesionComunicacion.cc3d. Este es el que es llamado al usar el programa CC3D (compucell3d.org) 
 
 Para el correcto funcionamiento del programa, es importante generar las siguiente carpetas con los archivos adecuados:
 

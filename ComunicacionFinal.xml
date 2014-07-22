@@ -1,0 +1,173 @@
+<!--Aqui se van a deifinir las ecuaciones diferenciales ordinales. En realidad solo se escribe la comunicacion mixta. Despues, cambiando algunos parametros llegamos a la indirecta o la directa  -->
+<!-- En este codigo, la e, s y d tienen valores que van a ser sobreescritos por el archivo de adhesionComunicacionSteppables.py, al igual que Ivec, Imul y Iext -->
+
+<sbml xmlns = "http://www.sbml.org/sbml/level2" level = "2" version = "1">
+   <model id = "cell">
+      <listOfCompartments>
+         <compartment id = "compartment" size = "1"/>
+      </listOfCompartments>
+      <listOfSpecies>
+         <species id = "X" boundaryCondition = "true" initialConcentration = "1" compartment = "compartment"/>
+         <species id = "I" boundaryCondition = "false" initialConcentration = "1.25000000000201" compartment = "compartment"/>
+         <species id = "A" boundaryCondition = "false" initialConcentration = "2.12660560070023E-12" compartment = "compartment"/>
+         <species id = "Ivec" boundaryCondition = "false" initialConcentration = "5" compartment = "compartment"/>
+         <species id = "Imul" boundaryCondition = "false" initialConcentration = "2" compartment = "compartment"/>
+         <species id = "Iext" boundaryCondition = "false" initialConcentration = "1" compartment = "compartment"/>
+      </listOfSpecies>
+      <listOfParameters>
+         <parameter id = "k1" value = "0.004"/>
+         <parameter id = "k2" value = "0.005"/>
+         <parameter id = "k3" value = "0.005"/>
+         <parameter id = "k4" value = "0.006"/>
+         
+         
+         <parameter id = "d" value = "0.009"/>
+         <parameter id = "e" value = "0.009"/>
+         
+         <parameter id = "s" value = "0.009"/>
+      </listOfParameters>
+      <listOfReactions>
+         <reaction id = "J0" reversible = "false">
+            <listOfReactants>
+               <speciesReference species = "X" stoichiometry = "1"/>
+            </listOfReactants>
+            <listOfProducts>
+               <speciesReference species = "A" stoichiometry = "1"/>
+            </listOfProducts>
+            <kineticLaw>
+               <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                  <apply>
+                     <divide/>
+                     <apply>
+                        <times/>
+                        <ci>
+                              k1
+                        </ci>
+                        <ci>
+                              A
+                        </ci>
+                        <ci>
+                              A
+                        </ci>
+                        <ci>
+                              X
+                        </ci>
+                     </apply>
+                     <ci>
+                           I
+                     </ci>
+                  </apply>
+               </math>
+            </kineticLaw>
+         </reaction>
+         <reaction id = "J1" reversible = "false">
+            <listOfReactants>
+               <speciesReference species = "X" stoichiometry = "1"/>
+            </listOfReactants>
+            <listOfProducts>
+               <speciesReference species = "I" stoichiometry = "1"/>
+            </listOfProducts>
+            <kineticLaw>
+               <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                  <apply>
+                     <plus/>
+                     <apply>
+                        <times/>
+                        <ci>
+                              k3
+                        </ci>
+                        <ci>
+                              A
+                        </ci>
+                        <ci>
+                              A
+                        </ci>
+                     </apply>
+                     <apply>
+                        <times/>
+                        <ci>
+                              d
+                        </ci>
+                        <ci>
+                              Ivec
+                        </ci>
+                     </apply>
+                     <apply>
+                        <times/>
+                        <ci>
+                              e
+                        </ci>
+                        <ci>
+                              Iext
+                        </ci>
+                     </apply>
+                  </apply>
+               </math>
+            </kineticLaw>
+         </reaction>
+         <reaction id = "J2" reversible = "false">
+            <listOfReactants>
+               <speciesReference species = "A" stoichiometry = "1"/>
+            </listOfReactants>
+            <listOfProducts>
+               <speciesReference species = "X" stoichiometry = "1"/>
+            </listOfProducts>
+            <kineticLaw>
+               <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                  <apply>
+                     <times/>
+                     <ci>
+                           k2
+                     </ci>
+                     <ci>
+                           A
+                     </ci>
+                  </apply>
+               </math>
+            </kineticLaw>
+         </reaction>
+         <reaction id = "J3" reversible = "false">
+            <listOfReactants>
+               <speciesReference species = "I" stoichiometry = "1"/>
+            </listOfReactants>
+            <listOfProducts>
+               <speciesReference species = "X" stoichiometry = "1"/>
+            </listOfProducts>
+            <kineticLaw>
+               <math xmlns = "http://www.w3.org/1998/Math/MathML">
+                  <apply>
+                     <plus/>
+                     <apply>
+                        <times/>
+                        <ci>
+                              k4
+                        </ci>
+                        <ci>
+                              I
+                        </ci>
+                     </apply>
+                     <apply>
+                        <times/>
+                        <ci>
+                              d
+                        </ci>
+                        <ci>
+                              Imul
+                        </ci>
+                     </apply>
+                     <apply>
+                        <times/>
+                        <ci>
+                              s
+                        </ci>
+                        <ci>
+                              I
+                        </ci>
+                     </apply>
+                  </apply>
+               </math>
+            </kineticLaw>
+         </reaction>
+      </listOfReactions>
+   </model>
+</sbml>

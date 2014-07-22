@@ -1,0 +1,5 @@
+<Simulation version="3.7.0">
+   <XMLScript Type="XMLScript">Simulation/adhesionComunicacion.xml</XMLScript>
+   <PythonScript Type="PythonScript">Simulation/adhesionComunicacion.py</PythonScript>
+   <Resource Type="Python">Simulation/adhesionComunicacionSteppables.py</Resource>
+</Simulation>

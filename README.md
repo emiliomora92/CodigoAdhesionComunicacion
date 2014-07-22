@@ -1,9 +1,9 @@
 CodigoAdhesionComunicacion
 ==========================
 
-Aquí está el código por si es necesario descargarlo. Hay cuatro archivos: 
+Aquí está el código por si es necesario descargarlo. Hay seis archivos: 
 
-1) El piff_aleatorio.py que crea células dispersas para los escenarios de agregacion y poblaciones celulares
+1) El piff_aleatorio.py crea archivos pif (equivalentes a txt) para el estappable de inicio definido en adhesionComunicacion.xml, con células dispersas para los escenarios de agregacion y poblaciones celulares
 
 2) El adhesionComunicacion.xml que genera las condiciones iniciales del programa
 
@@ -11,3 +11,34 @@ Aquí está el código por si es necesario descargarlo. Hay cuatro archivos:
 
 4) El adhesionComunicacion.py que corre todo el programa junto. 
 
+5) El ComunicacionFinal.xml en donde están definidas las EDO bajo forma de SBML.
+
+6) Un ejemplo del resultado del piff_aleatorio, denominado random2D.txt. Si el piffaleatorio tiene problemas, cargar directamente el random2D.txt en la misma carpeta que el resto.
+
+7) El archivo adhesionComunicacion.cc3d. Este es el que es llamado al usar el programa. 
+
+Para el correcto funcionamiento del programa, es importante generar las siguiente carpetas con los archivos adecuados:
+
+     * Carpeta X
+     
+     *** adhesionComunicacion.cc3d
+     
+     ***** Simulation
+     
+     ******* adhesionComunicacion.xml
+     
+     ******* adhesionComunicacion.py
+     
+     ******* adhesionComunicacionSteppables.py
+     
+     ******* ComunicacionFinal.xml
+     
+     ******* random_2D.txt
+     
+     ******* piff_aleatorio.py (este es opcional).
+     
+     
+Cualquier cosa que no funcione es probable que tenga que ver con la transcripción que hice de algunos términos. Cualquier duda avisenme y lo corrigo emiliomora92@gmail.com
+
+Chido. 
+           *

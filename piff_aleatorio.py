@@ -49,7 +49,7 @@ def coor_xy_tipos(x,y,n,t1,t2):
 	
 	#esta ultima parte escribe el piff en un documento. Hay que verificar en que archivo lo escribe, para poder encontrarlo posteriormente.
 	
-	ar_out = open ("/home/emilio/install_projects/3.7.0/EmilioTesis/adhesionComunication/Simulation/random_2D.pif",'w')
+	ar_out = open ("/home/emilio/install_projects/3.7.0/EmilioTesis/adhesionComunication/Simulation/random_2D.txt",'w')
 	for k in coor:
 		ar_out.write("%s %s %s %s %s %s 0 0\t"%(k,coor[k][2],coor[k][0],coor[k][0],coor[k][1],coor[k][1]))
 		ar_out.write("\n")

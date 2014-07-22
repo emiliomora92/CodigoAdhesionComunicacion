@@ -25,9 +25,9 @@ coor_xy_tipos(80, 80, 100, "Activada","Inhibida")
 #   Las clases ConstraintInitializerSteppable, SBMLsolver, ExtraFields y Plotting siempre están activadas. 
 #   Las clases DirectaClass e IndirectaClass van a estar activadas o desactivadas según el escenario.                 
 
-from adhesionComunicacionSteppables import ConstraintInitializerSteppable
-ConstraintInitializerSteppableInstance=ConstraintInitializerSteppable(sim,_frequency=1)
-steppableRegistry.registerSteppable(ConstraintInitializerSteppableInstance)
+from adhesionComunicacionSteppables import CreadorFilamento
+creadorFilamento=CreadorFilamento(sim,_frequency=1)
+steppableRegistry.registerSteppable(creadorFilamento)
 
 from adhesionComunicacionSteppables import DirectaClass
 directaClass=DirectaClass(_simulator=sim,_frequency=1)
@@ -40,6 +40,10 @@ steppableRegistry.registerSteppable(secretion)
 from adhesionComunicacionSteppables import SBMLsolver
 sbmlsolver=SBMLsolver(_simulator=sim,_frequency=1)
 steppableRegistry.registerSteppable(sbmlsolver)
+
+from adhesionComunicacionSteppables import ContadorTC
+contadorTC=ContadorTC(sim,_frequency=1)
+steppableRegistry.registerSteppable(contadorTC)
         
 from adhesionComunicacionSteppables import ExtraFields
 extraFields=ExtraFields(_simulator=sim,_frequency=1)

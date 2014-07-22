@@ -19,23 +19,23 @@ Aquí está el código por si es necesario descargarlo. Hay seis archivos:
 
 Para el correcto funcionamiento del programa, es importante generar las siguiente carpetas con los archivos adecuados:
 
-     * Carpeta X
+     1. Carpeta X
      
-     *** adhesionComunicacion.cc3d
+        1.1 adhesionComunicacion.cc3d
      
-     ***** Simulation
+        1.2 Simulation (carpeta)
      
-     ******* adhesionComunicacion.xml
+            1.2.1 adhesionComunicacion.xml
      
-     ******* adhesionComunicacion.py
+            1.2.2 adhesionComunicacion.py
      
-     ******* adhesionComunicacionSteppables.py
+            1.2.3 adhesionComunicacionSteppables.py
      
-     ******* ComunicacionFinal.xml
+            1.2.4 ComunicacionFinal.xml
      
-     ******* random_2D.txt
+            1.2.5 random_2D.txt
      
-     ******* piff_aleatorio.py (este es opcional).
+            1.2.6 piff_aleatorio.py (este es opcional).
      
      
 Cualquier cosa que no funcione es probable que tenga que ver con la transcripción que hice de algunos términos. Cualquier duda avisenme y lo corrigo emiliomora92@gmail.com
